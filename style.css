@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+  color:white;
+}
+
+body{
+    background-color:black;
+}
+
+.main {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("../Netflix_Clone/assests/images/background_image.jpg") no-repeat center
+      center;
+  height: 103vh;
+  background-size: cover;
+  border-bottom:1px solid red;
+}
+
+.main nav {
+  display: flex;
+  justify-content: space-between;
+  width: 76%;
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 17vh;
+}
+
+.main nav button {
+  background-color: #e50914;
+  color: white;
+  width: 15vh;
+  height: 6.5vh;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+.red:hover {
+  background-color: #bf0912;
+  cursor: pointer;
+}
+
+.main .hero {
+  /* Since some height has been taken by nav  */
+  height: 90%;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+.main .hero> :first-child {
+  /* Defining the size of the font */
+  font-size: 3.5rem;
+  /* Defining the max width so that we the text move into second line when we make the text larger */
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 900;
+}
+/* The '>' sign shows the immediate child */
+.main .hero> :nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.main .hero> :nth-child(3) {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+.main .hero .input{
+    height: 10vh;
+    width: 50%;
+    display: flex;
+    gap:0.5rem;
+    border-radius: 0.5rem;
+}
+
+.main .hero .input> :nth-child(1){
+    height: 100%;
+    width:70%;
+    border-radius: 0.5rem;
+    background: transparent;
+    border:1px solid white;
+}
+
+.main .hero .input .start{
+    height: 100%;
+    width: 30%;
+    border-radius: 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: red;
+}
