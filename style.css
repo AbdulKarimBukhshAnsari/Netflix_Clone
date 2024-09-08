@@ -3,11 +3,11 @@
   margin: 0;
   border: none;
   font-family: "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
-  color:white;
+  color: white;
 }
 
-body{
-    background-color:black;
+body {
+  background-color: black;
 }
 
 .main {
@@ -19,9 +19,9 @@ body{
     ),
     url("../Netflix_Clone/assests/images/background_image.jpg") no-repeat center
       center;
-  height: 103vh;
+  height: 100vh;
   background-size: cover;
-  border-bottom:1px solid red;
+  border-bottom: 1px solid red;
 }
 
 .main nav {
@@ -51,7 +51,7 @@ body{
 
 .main .hero {
   /* Since some height has been taken by nav  */
-  height: 90%;
+  height:calc(100% - 17vh);
   display: flex;
   color: white;
   flex-direction: column;
@@ -61,7 +61,7 @@ body{
   font-family: "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
 }
 
-.main .hero> :first-child {
+.main .hero > :first-child {
   /* Defining the size of the font */
   font-size: 3.5rem;
   /* Defining the max width so that we the text move into second line when we make the text larger */
@@ -69,37 +69,97 @@ body{
   text-align: center;
   margin: 0 auto;
   font-weight: 900;
+  text-align: center;
 }
 /* The '>' sign shows the immediate child */
-.main .hero> :nth-child(2) {
+.main .hero > :nth-child(2) {
   font-size: 1.2rem;
   font-weight: 600;
+  text-align: center;
 }
-.main .hero> :nth-child(3) {
+.main .hero > :nth-child(3) {
   margin-top: 1rem;
   font-size: 1.1rem;
+  text-align: center;
+  padding: 0 0.5rem; 
 }
-.main .hero .input{
-    height: 10vh;
-    width: 50%;
-    display: flex;
-    gap:0.5rem;
-    border-radius: 0.5rem;
-}
-
-.main .hero .input> :nth-child(1){
-    height: 100%;
-    width:70%;
-    border-radius: 0.5rem;
-    background: transparent;
-    border:1px solid white;
+.main .hero .input {
+  height: 10vh;
+  width: 45%;
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
 }
 
-.main .hero .input .start{
-    height: 100%;
-    width: 30%;
-    border-radius: 0.3rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    background-color: red;
+.main .hero .input > :nth-child(1) {
+  height: 100%;
+  width: 53%;
+  border-radius: 0.3rem;
+  background: transparent;
+  border: 0.9px solid rgb(255, 255, 255,0.3);
+  padding: 0 1.5rem;
+  font-size: 1rem;
+}
+
+.main .hero .input .start {
+  height: 100%;
+  width: 35%;
+  border-radius: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: red;
+}
+.main .hero .input .start:hover {
+  cursor: pointer;
+  background-color: #bf0912;
+}
+.border {
+  position: relative;
+  height: 3px; 
+  background-color: transparent; 
+  box-shadow: 0px -20px 30px rgba(26, 30, 233, 0.5);
+
+}
+.border::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 3px; 
+  background: linear-gradient(to right, #cc454c, #d80572,#cc454c);
+  border-radius: 0 0 100% 100%; 
+}
+/* Styling for 1st section  */
+.first{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  align-items: center;
+  gap: 23px;
+}
+.first .first-text> :nth-child(1){
+  font-size: 3rem ;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+.first .first-text> :nth-child(2){
+  font-size: 1.2rem;
+}
+
+.first .first-video{
+  position: relative;
+}
+.first .first-video video{
+  position: absolute;
+  right: 80px;
+  top:80px;
+  z-index: -10;
+}
+
+.separator{
+  height:5px;
+  background-color: gray;
+  opacity:0.5;
 }
